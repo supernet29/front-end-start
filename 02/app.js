@@ -103,7 +103,6 @@ function printSumOfUserInput()
 		if(userInput != null)
 		{
 			parsedData = parseInt(userInput);
-			console.log(parsedData);
 			sum += parsedData;
 		}
 	}while(userInput != null);
