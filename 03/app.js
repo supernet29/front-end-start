@@ -150,8 +150,8 @@ document.body.appendChild(chessTable);
 
 // Link EventListener
 // carousel
-carouselElement.children[1].children[0].addEventListener('click',carousel1.prevPage);
-carouselElement.children[1].children[2].addEventListener('click',carousel1.nextPage);
+carouselElement.children[1].children[0].addEventListener('click',carousel1.prevPage.bind(carousel1));
+carouselElement.children[1].children[2].addEventListener('click',carousel1.nextPage.bind(carousel1));
 
 // chessTable
 var positions = document.querySelectorAll(".position");
