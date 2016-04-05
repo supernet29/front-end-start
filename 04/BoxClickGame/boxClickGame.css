@@ -1,5 +1,9 @@
-.boxClickGame {
+html, body, .boxClickGame {
 	height: 100%;
+	margin: 0;
+}
+
+.boxClickGame {
 	border: 1px solid black;
 }
 
