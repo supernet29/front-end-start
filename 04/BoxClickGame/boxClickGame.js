@@ -1,5 +1,6 @@
 var score = 0;
 var level = 1;
+var hit = 0;
 var miss = 0
 var levelUpSize = 10;
 var gameOverMiss = 10;
@@ -13,6 +14,19 @@ var gameWindow = document.querySelectorAll(".gameWindow", boxClickGameElement)[0
 var height = gameWindow.clientHeight;
 var width = gameWindow.clientWidth;
 
+function boxClick() {
+	score += level;
+	hit++;
+
+	if(hit >= levelUpSize){
+		level++;
+		hit = 0;
+	}
+
+	refreshScoreBoard();
+	repositionBox();
+}
+
 function repositionBox() {
 	var newLeftPos = Math.floor(Math.random() * (width - boxSize));
 	var newTopPos = Math.floor(Math.random() * (height - boxSize));
@@ -21,21 +35,10 @@ function repositionBox() {
 	box.style.top = newTopPos + "px";
 }
 
-function boxClick() {
-	score += 1;
-
-	if(score >= levelUpSize)
-		level++;
-
-
-	refreshScoreBoard();
-	//refreshGameWindow();
-}
-
 function refreshScoreBoard() {
-	var scoreElement = document.querySelectorAll(".score > .value", scoreBoard);
-	var levelElement = document.querySelectorAll(".level > .value", scoreBoard);
-	var missElement = document.querySelectorAll(".miss > .value", scoreBoard);
+	var scoreElement = document.querySelectorAll(".score > .value", scoreBoard)[0];
+	var levelElement = document.querySelectorAll(".level > .value", scoreBoard)[0];
+	var missElement = document.querySelectorAll(".miss > .value", scoreBoard)[0];
 
 	scoreElement.innerHTML = score;
 	levelElement.innerHTML = level;
@@ -43,4 +46,13 @@ function refreshScoreBoard() {
 }
 
 function boxMiss() {
+	miss++;
+
+	if(miss >= gameOverMiss) {
+		gameOver();
+	}
+
+	repositionBox();
 }
+
+box.addEventListener("click", boxClick);
