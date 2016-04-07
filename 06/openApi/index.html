@@ -10,20 +10,22 @@
 			<h1>검색어를 입력하세요</h1>
 
 			<div class = 'searchBox'>
-				<input type = 'text'>
-				<button>검색</button>
+				<input id = 'queryInput' type = 'text'>
+				<button id = "searchButton" type="button">검색</button>
 			</div>
+
 			<div class = 'ResultBox'>
 				<ul class = 'resultList'>
 
 				<script id = 'resultTemplate' type='script/template'>
-					<il class = 'item'>
-						<h2 class = 'title'><a class = 'link' href = '<%= link %>'> <%= title %> </a></h2>
-						<p class = 'description'><%= description %></p>
+					<il class = "item">
+						<h2 class = "title"><a class = "link" href = "<%= link %>"> <%= title %> </a></h2>
+						<p class = "description"><%= description %></p>
 					</il>
 				</script>
 
 				</ul>
+				<Button id = 'moreButton'>더 보기</button>
 			</div>
 		</div>
 
