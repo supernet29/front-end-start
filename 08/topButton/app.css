@@ -1,0 +1,12 @@
+.longWrite {
+	height : 1000px;
+}
+
+#topButton {
+	width:128px;
+	height:128px;
+	background : url("topButton.png");
+	position: fixed;
+	left : 80%;
+	top : 80%;
+}
