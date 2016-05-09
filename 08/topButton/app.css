@@ -3,6 +3,7 @@
 }
 
 #topButton {
+	display : none;
 	width:128px;
 	height:128px;
 	background : url("topButton.png");
