@@ -1,0 +1,28 @@
+.card {
+	position : relative;
+	width : 150px;
+	height : 200px;
+	border : solid black 1px;
+	float : left;
+}
+
+.card > img {
+	position : absolute;
+	margin : 5px;
+	width : 140px;
+	height : 190px;
+}
+
+.cardList {
+	padding-top : 100px;
+	margin : auto;
+	width : 608px;
+	list-style-type : none;
+}
+
+.gameBoard {
+}
+
+.clear {
+	clear : both;
+}
