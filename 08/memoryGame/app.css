@@ -1,16 +1,25 @@
 .card {
-	position : relative;
 	width : 150px;
 	height : 200px;
-	border : solid black 1px;
 	float : left;
 }
 
-.card > img {
+.card img {
+	display:none;
 	position : absolute;
+	top : 5px;
+	left : 5px;
+	width : 126px;
+	height : 176px;
+}
+
+.card div {
+	position : relative;
+	border : solid lightpink 2px;
+	border-radius : 10px;
 	margin : 5px;
-	width : 140px;
-	height : 190px;
+	width : 136px;
+	height : 186px;
 }
 
 .cardList {
@@ -18,9 +27,6 @@
 	margin : auto;
 	width : 608px;
 	list-style-type : none;
-}
-
-.gameBoard {
 }
 
 .clear {
