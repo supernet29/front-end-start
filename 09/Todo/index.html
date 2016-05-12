@@ -23,10 +23,10 @@
 
 <script type="text/template" id="todoTemplate">
   <% for(var i=0; i < todos.length; i++) { %>
-  <%	var checkedValue = todos[i].checked ? "checked" : ""; %>
+  <% var check = todos[i].checked ? "checked" : ""; %>
   <li data-id="<%= todos[i].id %>">
     <button class="delete">×</button>
-	<input type="checkbox" class="toggle-checked" <%= checkedValue %>>
+	<input type="checkbox" class="toggle-checked" <%= check %> >
     <span class="text"><%=todos[i].title%></span>
   </li>
   <%} %>

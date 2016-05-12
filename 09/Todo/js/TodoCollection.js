@@ -35,10 +35,10 @@
 		for (var i = 0; i < data.length; i++) {
 			if(data[i].id == id) {
 				data[i].checked = stat;
+				break;
 			}
-			break;
 		}
+        app.$wrap.trigger("modifiedCollection", [data]);
 	}
-
   };
 })(Todo, jQuery);

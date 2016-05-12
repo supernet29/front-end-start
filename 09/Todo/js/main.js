@@ -22,6 +22,17 @@
 
   });
 
+  $listDom.on('change', 'li > input', function(event) {
+	  console.log("onChange");
+	  var $check = $(event.target);
+	  var id = $check.parent().data('id');
+	  var checked = $check.prop('checked');
+	  console.log(id);
+	  console.log(checked);
+
+	  app.collection.setCheckStatus(id, checked);
+  });
+
   // //처음 로딩시에 기존에 저장된 데이터 가져와서 보여주기
   var initData = app.util.storage.load();
   if(initData) {
