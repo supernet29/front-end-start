@@ -1,41 +1,45 @@
-var cardElements = $(".card > a");
-
-var images = [
-
-];
-
-var controler = {
-	start : function () {
-
-	},
-
-	OnCardOpen : function (card) {
-		openedCard[openedCardNumber] = card;
-		openedCardNumber ++;
-
-		if(openedCardNumber < 1) {
-		}
-			
-
-
-	},
-
-	openedCard = [],
-	opendCardNumber = 0
+function Card (control, imageNum) 
+{
+	this.cardElement = null;
+	this.imageNumber = imageNum;
+	this.controller = control;
+	this.isOpened = false;
 	
+	this.open = function () 
+	{
+		
+	};
+
+	this.close = function () 
+	{
+
+	};
+
+	this.hide = function () 
+	{
+
+	};
+
+	this.setCardElement = function (element) 
+	{
+
+	};
 }
 
-var card = {
+function Control ()
+{
+	this.cardList = [];
+	this.openedCard = [];
+	this.hasOpenedCard = false;
+	this.matchedNumber = 0;
 
-	openCard : function () {
+	this.cardClicked = function (card)
+	{
 
-	},
+	};
 
-	closeCard : function () {
-		
-	},
+	this.init = function ()
+	{
 
-	cardElement : null,
-
-	controler : controler
-};
+	};
+}
